@@ -13,7 +13,7 @@ module.exports = function( grunt ) {
 				// use jshint-stylish to make errors look and read good
 				reporter: require('jshint-stylish')
 			},
-			build: ['Gruntfile.js', 'app/states/**/*.js']
+			build: ['Gruntfile.js', 'states/**/*.js']
 		},
 
 		// Empty folders to start fresh -----------------------------------
@@ -46,7 +46,7 @@ module.exports = function( grunt ) {
 				files: [
 					{
 						expand: true,
-						cwd: 'app/',
+						cwd: '/',
 						src: 'states/**/*.html',
 						dest: 'dist',
 					},
@@ -56,25 +56,25 @@ module.exports = function( grunt ) {
 				files: [
 					{
 						expand: true,
-						cwd: 'app/',
+						cwd: '/',
 						src: 'fonts/*',
 						dest: 'dist',
 					},
 					{
 						expand: true,
-						cwd: 'app/',
+						cwd: '/',
 						src: 'images/*.ico',
 						dest: 'dist',
 					},
 					{
 						expand: true,
-						cwd: 'app/',
+						cwd: '/',
 						src: 'resources/**/*',
 						dest: 'dist',
 					},
 					{
 						expand: true,
-						cwd: 'app/',
+						cwd: '/',
 						src: 'js_components/directives/**/*.html',
 						dest: 'dist',
 					},
@@ -89,7 +89,7 @@ module.exports = function( grunt ) {
 //			},
 //			build: {
 //				files: {
-//					'dist/js/app.js': 'app/states/**/*.js',
+//					'dist/js/app.js': 'states/**/*.js',
 //				}
 //			}
 //		},
@@ -101,8 +101,8 @@ module.exports = function( grunt ) {
 //			},
 //			build: {
 //				files: {
-//					'dist/css/style.css': 'app/assets/css/style.css',
-//					'dist/css/normalize.css': 'app/assets/css/normalize.css'
+//					'dist/css/style.css': 'assets/css/style.css',
+//					'dist/css/normalize.css': 'assets/css/normalize.css'
 //				}
 //			}
 //		},
@@ -131,7 +131,7 @@ module.exports = function( grunt ) {
 		// Creates configurations in memory so additional tasks can operate on them.
 		// configure usemin to enable builds ------------------------------------
 		useminPrepare: {
-			html: 'app/index.html',
+			html: 'index.html',
 			options: {
 				dest: 'dist',
 				flow: {
@@ -168,7 +168,7 @@ module.exports = function( grunt ) {
 			dist: {
 				files: [{
 					expand: true,
-					cwd: 'app/images',
+					cwd: 'images',
 					src: '{,*/}*.{png,jpg,jpeg,gif}',
 					dest: 'dist/images'
 				}]
@@ -180,7 +180,7 @@ module.exports = function( grunt ) {
 			dist: {
 				files: [{
 					expand: true,
-					cwd: 'app/images',
+					cwd: 'images',
 					src: '{,*/}*.svg',
 					dest: 'dist/images'
 				}]
