@@ -1,0 +1,16 @@
+{
+    "name": "fitnessbott",
+    "description": "An app for fitness enthusiasts",
+    "author": "Doyin Olarewaju",
+    "contributors": {},
+    "dependencies": {
+        "angular": ">=1.4.0",
+        "angular-ui-router": ">=0.2.11",
+	    "angular-material": "~1.0.1"
+    },
+    "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/gate3/fitnessbott"
+    }
+}
