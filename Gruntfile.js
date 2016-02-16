@@ -46,7 +46,7 @@ module.exports = function( grunt ) {
 				files: [
 					{
 						expand: true,
-						cwd: '/',
+						cwd: '',
 						src: 'states/**/*.html',
 						dest: 'dist',
 					},
@@ -56,25 +56,25 @@ module.exports = function( grunt ) {
 				files: [
 					{
 						expand: true,
-						cwd: '/',
+						cwd: '',
 						src: 'fonts/*',
 						dest: 'dist',
 					},
 					{
 						expand: true,
-						cwd: '/',
+						cwd: '',
 						src: 'images/*.ico',
 						dest: 'dist',
 					},
 					{
 						expand: true,
-						cwd: '/',
+						cwd: '',
 						src: 'resources/**/*',
 						dest: 'dist',
 					},
 					{
 						expand: true,
-						cwd: '/',
+						cwd: '',
 						src: 'js_components/directives/**/*.html',
 						dest: 'dist',
 					},
