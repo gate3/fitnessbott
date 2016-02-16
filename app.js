@@ -4,12 +4,12 @@ angular.module( 'fitnessbott', [
 ]).
 config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $urlRouterProvider ) {
 
-	$urlRouterProvider.otherwise('example');
+	$urlRouterProvider.otherwise('home');
 
 	$stateProvider.
-	state('example', {
-		url: '/example',
-		templateUrl: 'states/user_access/login.html',
+	state('home', {
+		url: '/',
+		templateUrl: 'states/user_access/home.html',
 		controller: 'exampleController'
 	});
 
