@@ -9,7 +9,7 @@ config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $url
 	$stateProvider.
 	state('example', {
 		url: '/example',
-		templateUrl: 'states/example/exampleView.html',
+		templateUrl: 'states/user_access/login.html',
 		controller: 'exampleController'
 	});
 
