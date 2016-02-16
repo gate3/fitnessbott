@@ -4,11 +4,12 @@
 		
 		<div id="app-name" class="md-display-1" style="padding-left:10px">
 			<h1><a ui-sref="home" style="text-decoration:none; color:#fff">FitnessBott</a></h1>
+			<h5 class="md-subhead md-primary">...where sports enthusiasts and professionals connect</h5>
 		</div>	
 		
 		<span flex></span>
 		
-		<md-button ng-if="!$state.is('home.login')" class="md-raised" ng-click="login()">Sign In</md-button>	
+			
 		
     </md-toolbar>
 
@@ -20,8 +21,11 @@
 						<h2 style="text-align:center" class="title">{{i.title}}</h2>
 						<p style="text-align:center">{{i.description}}</p>
 					</li>
-				</flex-slider>				
-				<md-button class="md-raised md-primary">Sign Up Now</md-button>
+				</flex-slider>	
+				<div class="column" layout layout-align="center center">
+					<md-button class="md-raised md-primary">Sign Up Now</md-button>
+					<md-button class="md-raised md-primary">Sign In</md-button>
+				</div>
 			</div>
 			
 		</div>
