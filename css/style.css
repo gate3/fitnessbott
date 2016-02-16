@@ -1,5 +1,6 @@
 body {
 	font-family: 'Roboto','Raleway',sans-serif;
+	
 }
 
 .slide.ng-leave {
@@ -28,10 +29,13 @@ body {
 }
 		
 #home_div{
-	background-image:url('../images/boxing_gym__cage_lights_off__by_jakebowkett-d8bka74.jpg');
+	background-image:url('../images/best-jogging-playlist-high-resolution-wallpaper-for-desktop-background-download-jogging-pictures-free.png');
 	background-repeat:no-repeat;
-   	background-size:contain;
-    height:200px;width:1200px;
+    position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 /* Primary content area */
 

@@ -1,6 +1,7 @@
 angular.module( 'fitnessbott', [
   'ui.router',
-  'ngMaterial'
+  'ngMaterial',
+  'angular-flexslider'
 ]).
 config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $urlRouterProvider ) {
 

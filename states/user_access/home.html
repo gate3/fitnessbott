@@ -1,23 +1,29 @@
-<div flex layout="column" id="home_div" role="main"  layout-fill>
+<div flex layout="column" id="home_div" role="main"  layout-fill layout-padding>
+	
+	<md-toolbar layout="row" layout-align="end center" layout-padding style="background-color:transparent" > 
+		
+		<div id="app-name" class="md-display-1" style="padding-left:10px">
+			<h1><a ui-sref="home" style="text-decoration:none; color:#fff">FitnessBott</a></h1>
+		</div>	
+		
+		<span flex></span>
+		
+		<md-button ng-if="!$state.is('home.login')" class="md-raised" ng-click="login()">Sign In</md-button>	
+		
+    </md-toolbar>
+
 	<div ng-controller="homeController">
-		<md-content>
-			<h1>I hope this helps you, dear developer.</h1>
-			<h2>Seeing this means you are ready.</h2>
-			<md-card>
-				<md-card-title>
-					<md-card-title-text>
-						<span class="md-headline">This tests that material is injected.</span>
-					</md-card-title-text>
-					<md-card-content>
-						<a href="https://material.angularjs.org/latest/" target="_blank">
-							Click this to check the docs for angular-material.
-						</a>
-					</md-card-content>
-				</md-card-title>
-				<md-card-actions layout="row" ng-click="test()" layout-align="end center">
-					<md-button>Action button test</md-button>
-				</md-card-actions>
-			</md-card>
-		</md-content>
+		<div layout="row" >	
+			<div flex="40" layout="column">
+				<flex-slider slide="i in img track by $index" >
+					<li >						
+						<h2 style="text-align:center" class="title">{{i.title}}</h2>
+						<p style="text-align:center">{{i.description}}</p>
+					</li>
+				</flex-slider>				
+				<md-button class="md-raised md-primary">Sign Up Now</md-button>
+			</div>
+			
+		</div>
 	</div>
 </div>
