@@ -1,5 +1,5 @@
 body {
-font-family: 'Roboto','Raleway',sans-serif;
+	font-family: 'Roboto','Raleway',sans-serif;
 }
 
 .slide.ng-leave {
@@ -28,7 +28,10 @@ font-family: 'Roboto','Raleway',sans-serif;
 }
 		
 #home_div{
-	background-image:url('../images/32.jpg');
+	background-image:url('../images/boxing_gym__cage_lights_off__by_jakebowkett-d8bka74.jpg');
+	background-repeat:no-repeat;
+   	background-size:contain;
+    height:200px;width:1200px;
 }
 /* Primary content area */
 

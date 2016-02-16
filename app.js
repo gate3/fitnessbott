@@ -8,9 +8,9 @@ config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $url
 
 	$stateProvider.
 	state('home', {
-		url: '/',
+		url: '/home',
 		templateUrl: 'states/user_access/home.html',
-		controller: 'exampleController'
+		controller: 'homeController'
 	});
 
 } ] ).

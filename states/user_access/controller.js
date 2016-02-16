@@ -1,8 +1,8 @@
-angular.module( 'fitnessbott' ).controller( 'exampleController', exampleController );
+angular.module( 'fitnessbott' ).controller( 'homeController', homeController );
 
-exampleController.$inject = [ '$scope' ];
+homeController.$inject = [ '$scope','$rootScope' ];
 
-function exampleController( $scope ) {
+function homeController( $scope,$rootScope ) {
 	$scope.test = function(){
 		console.log("test");
 	}
