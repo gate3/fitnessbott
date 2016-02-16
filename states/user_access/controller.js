@@ -20,9 +20,14 @@ function homeController( $scope,$rootScope,$state ) {
 
 angular.module( 'fitnessbott' ).controller( 'loginController', loginController );
 
-loginController.$inject = [ '$scope','$rootScope' ];
+loginController.$inject = [ '$scope','$rootScope','$state' ];
 
-function loginController( $scope,$rootScope ) {
-
+function loginController( $scope,$rootScope,$state ) {
+	$scope.sign_up = function(){
+		$state.go("home.signup");
+	}
 	
+	$scope.select = function(){
+		
+	}
 };

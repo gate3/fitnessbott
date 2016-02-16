@@ -1,5 +1,16 @@
-	<div ng-controller="homeController">
-		<div layout="row" >	
+<div flex layout="column" id="home_div" role="main"  layout-fill layout-padding>
+	
+		<md-toolbar layout="row" layout-align="end center" layout-padding style="background-color:transparent" > 
+			<div id="app-name" class="md-display-1" style="padding-left:10px">
+				<h1><a ui-sref="home" style="text-decoration:none; color:#fff">FitnessBott</a></h1>
+				<h5 class="md-subhead md-primary">...where sports enthusiasts and professionals connect</h5>
+			</div>	
+			
+			<span flex></span>			
+		</md-toolbar>	
+
+	<div ng-controller="loginController">
+		<div layout="row" class="anim-slide-left" >	
 			<div flex="30" layout="column" >
 				
 	<md-card  layout-padding>
@@ -24,7 +35,7 @@
 									
 				</form>	
 		<md-card-actions layout="row" layout-align="end center">
-          <md-button class="md-raised md-primary md-subhead">Sign Up</md-button>
+          <md-button class="md-raised md-primary md-subhead" ng-click="sign_up()">Sign Up</md-button>
           <md-button class="md-raised md-primary">Lost Password</md-button>
         </md-card-actions>				
 			</md-card-content>
@@ -32,3 +43,4 @@
 			</div>				
 		</div>
 	</div>
+</div>

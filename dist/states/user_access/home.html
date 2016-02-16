@@ -1,4 +1,5 @@
-<div flex layout="column" id="home_div" role="main"  layout-fill layout-padding>
+<div ui-view class="anim-in-out" data-anim-speed="700">  
+	<div flex layout="column" id="home_div" role="main"  layout-fill layout-padding>
 	
 		<md-toolbar layout="row" layout-align="end center" layout-padding style="background-color:transparent" > 
 			<div id="app-name" class="md-display-1" style="padding-left:10px">
@@ -7,11 +8,10 @@
 			</div>	
 			
 			<span flex></span>			
-		</md-toolbar>
-		
-	<div ui-view class="anim-in-out anim-slide-left">  
+		</md-toolbar>		
+	
 		<div ng-controller="homeController">
-			<div layout="row" >	
+			<div layout="row" class="anim-slide-right">	
 				<div flex="40" layout="column">
 					<flex-slider slide="i in img track by $index" >
 						<li >						
@@ -27,6 +27,6 @@
 				
 			</div>
 		</div>
-	</div>
-	
+		
+	</div>	
 </div>

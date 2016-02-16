@@ -1,0 +1,77 @@
+<div ui-view class="anim-in-out" data-anim-speed="700">  
+	<div flex layout="column" id="sign_up" role="main"  layout-fill layout-padding>
+	
+		<md-toolbar layout="row" layout-align="end center" layout-padding style="background-color:transparent" > 
+			<div id="app-name" class="md-display-1" style="padding-left:10px">
+				<h1><a ui-sref="home" style="text-decoration:none; color:#fff">FitnessBott</a></h1>
+				<h5 class="md-subhead md-primary">...where sports enthusiasts and professionals connect</h5>
+			</div>			
+			<span flex></span>			
+		</md-toolbar>		
+			
+		<div ng-controller="homeController" ui-view="regView">
+			<div layout="column" layout-fill layout-align="center center" class="anim-slide-right">
+			
+			<h2 class="md-headline" style="color:#fff">Choose Profile Type</h2>
+			<div layout="row">
+				<div ng-click="select()">
+				 <md-card >		
+					<img ng-src="images/muscle-marathon.gif" 
+						style="width:300px;height:250px" class="md-card-image" alt="Washed Out"/>
+					<md-card-title>
+					  <md-card-title-text>
+						<span class="md-headline">Enthusiast</span>
+					  </md-card-title-text>
+					</md-card-title>
+					<md-card-content layout-align="center center">
+						You like excercise and wellbeing activities.
+					</md-card-content>
+					<md-card-actions layout="column" layout-align="end end">						
+							<md-button aria-label="Float Action Button" ng-click="select(0)" class="md-fab md-primary">
+								<md-icon> arrow_forward </md-icon>
+							</md-button>						
+					</md-card-actions>
+				  </md-card>		
+				</div>
+
+				  <md-card ng-click="select()">		
+					<img ng-src="images/goog_dribble.gif" 
+						style="width:300px;height:250px" class="md-card-image" alt="Washed Out"/>
+					<md-card-title>
+					  <md-card-title-text>
+						<span class="md-headline">Charity/Association</span>
+					  </md-card-title-text>
+					</md-card-title>
+					<md-card-content layout-align="center center">
+						For sports associations, charities and CSR departments.
+					</md-card-content>
+					<md-card-actions layout="column" layout-align="end end">
+						<md-button aria-label="Float Action Button" ng-click="select(1)" class="md-fab md-primary">
+								<md-icon> arrow_forward </md-icon>
+							</md-button>	
+					</md-card-actions>
+				  </md-card>	
+
+				  <md-card ng-click="select()">		
+					<img ng-src="images/500-10.45.gif" 
+						style="width:300px;height:250px" class="md-card-image" alt="Washed Out"/>
+					<md-card-title>
+					  <md-card-title-text>
+						<span class="md-headline">Business</span>
+					  </md-card-title-text>
+					</md-card-title>
+					<md-card-content layout-align="center center">
+						For wellness and excercise practitioners
+					</md-card-content>
+					<md-card-actions layout="column" layout-align="end end">
+						<md-button aria-label="Float Action Button"  ng-click="select(2)" class="md-fab md-primary">
+								<md-icon> arrow_forward </md-icon>
+							</md-button>	
+					</md-card-actions>
+				  </md-card>					  
+				</div>	
+			</div>
+		</div>
+		
+	</div>	
+</div>

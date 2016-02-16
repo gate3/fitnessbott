@@ -18,6 +18,11 @@ config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $url
 		url: '/login',
 		templateUrl: 'states/user_access/login.html',
 		controller: 'loginController'
+	})
+	.state('home.signup', {
+		url: '/signup',
+		templateUrl: 'states/user_access/register.html',
+		controller: 'loginController'
 	});
 
 } ] ).
