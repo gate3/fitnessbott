@@ -1,4 +1,3 @@
-console.log("parse is up");
 /**
  * Parse JavaScript SDK v1.6.14
  *
