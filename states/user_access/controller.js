@@ -1,8 +1,8 @@
 angular.module( 'fitnessbott' ).controller( 'homeController', homeController );
 
-homeController.$inject = [ '$scope','$rootScope' ];
+homeController.$inject = [ '$scope','$rootScope','$state' ];
 
-function homeController( $scope,$rootScope ) {
+function homeController( $scope,$rootScope,$state ) {
 
 	$scope.img = [
 			{title:"Plan your excercises",
@@ -13,7 +13,16 @@ function homeController( $scope,$rootScope ) {
 				description:'Customize your digital storefront. Connect with and manage clients. Connect with other enthusiasts or pros'}
 	];
 			
-	$scope.test = function(){
-		console.log("test");
+	$scope.login = function(){
+		$state.go("home.login");
 	}
+};
+
+angular.module( 'fitnessbott' ).controller( 'loginController', loginController );
+
+loginController.$inject = [ '$scope','$rootScope' ];
+
+function loginController( $scope,$rootScope ) {
+
+	
 };

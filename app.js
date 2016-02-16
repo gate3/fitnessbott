@@ -1,7 +1,8 @@
 angular.module( 'fitnessbott', [
   'ui.router',
   'ngMaterial',
-  'angular-flexslider'
+  'angular-flexslider',
+  'anim-in-out'
 ]).
 config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $urlRouterProvider ) {
 
@@ -12,6 +13,11 @@ config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $url
 		url: '/home',
 		templateUrl: 'states/user_access/home.html',
 		controller: 'homeController'
+	})
+	.state('home.login', {
+		url: '/login',
+		templateUrl: 'states/user_access/login.html',
+		controller: 'loginController'
 	});
 
 } ] ).

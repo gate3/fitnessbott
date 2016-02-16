@@ -1,33 +1,32 @@
 <div flex layout="column" id="home_div" role="main"  layout-fill layout-padding>
 	
-	<md-toolbar layout="row" layout-align="end center" layout-padding style="background-color:transparent" > 
-		
-		<div id="app-name" class="md-display-1" style="padding-left:10px">
-			<h1><a ui-sref="home" style="text-decoration:none; color:#fff">FitnessBott</a></h1>
-			<h5 class="md-subhead md-primary">...where sports enthusiasts and professionals connect</h5>
-		</div>	
-		
-		<span flex></span>
-		
+		<md-toolbar layout="row" layout-align="end center" layout-padding style="background-color:transparent" > 
+			<div id="app-name" class="md-display-1" style="padding-left:10px">
+				<h1><a ui-sref="home" style="text-decoration:none; color:#fff">FitnessBott</a></h1>
+				<h5 class="md-subhead md-primary">...where sports enthusiasts and professionals connect</h5>
+			</div>	
 			
+			<span flex></span>			
+		</md-toolbar>
 		
-    </md-toolbar>
-
-	<div ng-controller="homeController">
-		<div layout="row" >	
-			<div flex="40" layout="column">
-				<flex-slider slide="i in img track by $index" >
-					<li >						
-						<h2 style="text-align:center" class="title">{{i.title}}</h2>
-						<p style="text-align:center">{{i.description}}</p>
-					</li>
-				</flex-slider>	
-				<div class="column" layout layout-align="center center">
-					<md-button class="md-raised md-primary">Sign Up Now</md-button>
-					<md-button class="md-raised md-primary">Sign In</md-button>
+	<div ui-view class="anim-in-out anim-slide-left">  
+		<div ng-controller="homeController">
+			<div layout="row" >	
+				<div flex="40" layout="column">
+					<flex-slider slide="i in img track by $index" >
+						<li >						
+							<h2 style="text-align:center" class="title">{{i.title}}</h2>
+							<p style="text-align:center">{{i.description}}</p>
+						</li>
+					</flex-slider>	
+					<div class="column" layout layout-align="center center">
+						<md-button class="md-raised md-primary" ng-click="sign_up()">Sign Up Now</md-button>
+						<md-button class="md-raised md-primary" ng-click="login()">Sign In</md-button>
+					</div>
 				</div>
+				
 			</div>
-			
 		</div>
 	</div>
+	
 </div>

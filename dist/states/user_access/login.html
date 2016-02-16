@@ -1,0 +1,34 @@
+	<div ng-controller="homeController">
+		<div layout="row" >	
+			<div flex="30" layout="column" >
+				
+	<md-card  layout-padding>
+		<md-card-content layout="column" layout-align="center center">
+				<form role="form" ng-submit="submit(login_form)" name="login_form">
+					<h3 class="center">FitnessBott logo</h3>
+					<md-input-container flex class="md-warn center">
+						<label>Username</label>
+						<input  name="login" ng-model="formData.login" 
+						 ng-required="true" required/>
+					</md-input-container>
+					
+					<md-input-container flex class="md-warn center">
+						<label>Password</label>
+						<input type="password" name="password" ng-model="formData.password" 
+						ng-required="true" ng-minlength="8" required/>
+					</md-input-container>
+					 
+					<md-input-container ng-if="!busy" class="center">
+						<md-button type="submit" class="md-raised md-warn" ng-click="login()">Sign In</md-button>
+					</md-input-container>			
+									
+				</form>	
+		<md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-raised md-primary md-subhead">Sign Up</md-button>
+          <md-button class="md-raised md-primary">Lost Password</md-button>
+        </md-card-actions>				
+			</md-card-content>
+		</md-card>
+			</div>				
+		</div>
+	</div>
