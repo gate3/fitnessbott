@@ -22,7 +22,7 @@ config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $url
 	.state('home.signup', {
 		url: '/signup',
 		templateUrl: 'states/user_access/register.html',
-		controller: 'loginController'
+		controller: 'registerController'
 	});
 
 } ] ).

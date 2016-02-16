@@ -9,12 +9,12 @@
 			<span flex></span>			
 		</md-toolbar>		
 			
-		<div ng-controller="homeController" ui-view="regView">
+		<div ng-controller="registerController" >
 			<div layout="column" layout-fill layout-align="center center" class="anim-slide-right">
 			
 			<h2 class="md-headline" style="color:#fff">Choose Profile Type</h2>
 			<div layout="row">
-				<div ng-click="select()">
+				<div >
 				 <md-card >		
 					<img ng-src="images/muscle-marathon.gif" 
 						style="width:300px;height:250px" class="md-card-image" alt="Washed Out"/>
@@ -27,14 +27,15 @@
 						You like excercise and wellbeing activities.
 					</md-card-content>
 					<md-card-actions layout="column" layout-align="end end">						
-							<md-button aria-label="Float Action Button" ng-click="select(0)" class="md-fab md-primary">
+							<md-button aria-label="Float Action Button" 
+								ng-click="select(0)" class="md-fab md-primary">
 								<md-icon> arrow_forward </md-icon>
 							</md-button>						
 					</md-card-actions>
 				  </md-card>		
 				</div>
 
-				  <md-card ng-click="select()">		
+				  <md-card >		
 					<img ng-src="images/goog_dribble.gif" 
 						style="width:300px;height:250px" class="md-card-image" alt="Washed Out"/>
 					<md-card-title>
@@ -52,7 +53,7 @@
 					</md-card-actions>
 				  </md-card>	
 
-				  <md-card ng-click="select()">		
+				  <md-card >		
 					<img ng-src="images/500-10.45.gif" 
 						style="width:300px;height:250px" class="md-card-image" alt="Washed Out"/>
 					<md-card-title>

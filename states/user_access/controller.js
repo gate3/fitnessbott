@@ -16,6 +16,9 @@ function homeController( $scope,$rootScope,$state ) {
 	$scope.login = function(){
 		$state.go("home.login");
 	}
+	$scope.sign_up = function(){
+		$state.go("home.signup");
+	}
 };
 
 angular.module( 'fitnessbott' ).controller( 'loginController', loginController );
@@ -26,8 +29,15 @@ function loginController( $scope,$rootScope,$state ) {
 	$scope.sign_up = function(){
 		$state.go("home.signup");
 	}
+};
+
+angular.module( 'fitnessbott' ).controller( 'registerController', loginController );
+
+registerController.$inject = [ '$scope','$rootScope','$state' ];
+
+function registerController( $scope,$rootScope,$state ) {
 	
-	$scope.select = function(){
+	$scope.select = function(i){
 		
 	}
 };
