@@ -15,6 +15,6 @@ config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $url
 
 } ] ).
 run([function(){
-	Parse.initialize('oct','unused');
+	Parse.initialize('octo','Holdme2@forever');
 	Parse.serverURL = 'https://fitnessbott.herokuapp.com';
 }]);
