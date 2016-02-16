@@ -2,13 +2,6 @@ body {
 font-family: 'Roboto','Raleway',sans-serif;
 }
 
-#home_div{
-	background-image:url('../images/32.jpg');
-	margin: 0 auto;
-    width: 100%;
-    height: 100px;
-}
-
 .slide.ng-leave {
   position: relative;
 }
