@@ -1,4 +1,3 @@
-console.log("yess parse works");
 /**
  * Parse JavaScript SDK v1.6.14
  *
