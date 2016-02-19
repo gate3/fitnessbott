@@ -17,8 +17,9 @@ function homeController( $scope,$rootScope,$state ) {
 		$state.go("home.login");
 	}
 	$scope.sign_up = function(){
-		$state.go("home.signup");
+		$state.go("signup");
 	}
+
 };
 
 angular.module( 'fitnessbott' ).controller( 'loginController', loginController );
@@ -27,17 +28,36 @@ loginController.$inject = [ '$scope','$rootScope','$state' ];
 
 function loginController( $scope,$rootScope,$state ) {
 	$scope.sign_up = function(){
-		$state.go("home.signup");
+		$state.go("signup");
 	}
+
 };
 
-angular.module( 'fitnessbott' ).controller( 'registerController', loginController );
+angular.module( 'fitnessbott' ).controller( 'registerController', registerController );
 
 registerController.$inject = [ '$scope','$rootScope','$state' ];
 
 function registerController( $scope,$rootScope,$state ) {
 	
+	$scope.int_model = {interests:['Football','BasketBall','Running','Cycling','Gym Activities']};		
+	$scope.formData = {};
+
 	$scope.select = function(i){
-		
+		switch(i){
+			case 0:
+				//Save this info or keep in th
+				$state.go("signup.interests");
+				break;
+			case 1:
+		}
+	}
+
+	$scope.interests = function(){
+		console.log($scope.formData)
+		$state.go("signup.complete");
+	}
+
+	$scope.submit = function(){
+		console.log('test')
 	}
 };

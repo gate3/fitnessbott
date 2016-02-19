@@ -6,7 +6,8 @@
 		<title>FitnessBott</title>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:300,700' rel='stylesheet' type='text/css'/>
-		<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'/>
+		
+		<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 		<!-- build:css css/vendor.css -->
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.css">
@@ -19,7 +20,23 @@
 	</head>
 	<body>
 		<div ui-view></div>
-		<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<!--<script src="http://localhost/localcdn/jquery/jquery-2.1.1.min.js"></script>-->
+		<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>		  
+		<!--<script src="bower_components/parallax.js-1.4.2/parallax.js"></script>-->
+		<script>
+			$(document).ready(function(){
+				$(function(){
+					$('#imgAssoc').hover(
+						function(){
+							console.log('hover')
+							//$(this).attr('src','images/assoc.png');
+						},function(){
+							console.log('out')
+							//$(this).attr('src','images/assoc.gif');
+						})
+				})
+			});
+		</script>
 		<!-- build:js js/vendor.js -->
 		<script src="bower_components/angular/angular.js"></script>
 		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
@@ -31,7 +48,7 @@
 		<!-- build:js js/thirdParty.js -->
 		<script src="bower_components/parse-sdk.js"></script>
 		<script src="bower_components/flexslider/jquery.flexslider.js"></script>
-		<script src="bower_components/flexslider/angular-flexslider.js"></script>
+		<script src="bower_components/flexslider/angular-flexslider.js"></script>		
 		<!-- endbuild -->
 		<!-- build:js js/app.js -->
 		<script src="app.js"></script>

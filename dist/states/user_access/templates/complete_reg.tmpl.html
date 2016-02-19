@@ -1,0 +1,58 @@
+<div layout="column" layout-fill layout-align="center center" class="anim-slide-right" >
+	<h2 class="md-headline headline" style="color:#fff">Just a few more details...</h2>
+		<div layout="row">
+			<md-card>
+				<img ng-src="images/sports-2.png" style="width:300px;height:250px" 
+						class="md-card-image" alt="Individual"/>
+				<md-card-content layout-align="center center">
+					<form role="form" ng-submit="submit(login_form)" layout="column" layout-align="center center" 
+						name="login_form">
+						
+					 <md-input-container flex class="md-warn">
+						<label>Email</label>
+						<input  name="email" ng-model="formData.email" 
+						 ng-required="true" required/>
+					 </md-input-container>	
+
+					 <md-input-container flex class="md-warn">
+						<label>First Name</label>
+						<input  name="f_name" ng-model="formData.f_name" 
+						 ng-required="true" required/>
+					 </md-input-container>	
+						
+					<md-input-container flex class="md-warn">
+						<label>Last Name</label>
+						<input  name="l_name" ng-model="formData.l_name" 
+						 ng-required="true" required/>
+					 </md-input-container>	
+					 
+				   <md-datepicker ng-model="formData.curDate" md-placeholder="Enter date"></md-datepicker>
+					
+					<md-input-container flex class="md-warn">
+						<label>Password</label>
+						<input  type="password" name="password" ng-model="formData.password" 
+						 ng-required="true" required/>
+					 </md-input-container>	
+					 
+					 <md-input-container flex class="md-warn">
+						<label>Confirm Password</label>
+						<input  name="c_password" type="password" ng-model="formData.c_password" 
+						 ng-required="true" required/>
+					 </md-input-container>	
+					 
+					 <md-input-container flex ng-if="!busy">
+						<md-button type="submit" class="md-raised md-warn" ng-click="submit()">
+							Complete Signup
+						</md-button>
+					  </md-input-container>
+					  
+					  <div layout="row" layout-sm="column" layout-align="space-around" ng-if="busy">
+						<md-progress-circular class="md-warn md-hue-2" md-diameter="20px" md-mode="indeterminate" >
+						</md-progress-circular>
+					  </div>
+					  
+					</form>
+				</md-card-content>
+			</md-card>
+		</div>	
+</div>

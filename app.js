@@ -19,10 +19,36 @@ config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $url
 		templateUrl: 'states/user_access/login.html',
 		controller: 'loginController'
 	})
-	.state('home.signup', {
+	.state('signup', {
 		url: '/signup',
-		templateUrl: 'states/user_access/register.html',
-		controller: 'registerController'
+		views:{
+			'':{
+				templateUrl: 'states/user_access/register.html',
+				controller: 'registerController'
+			},
+			'main_page@signup':{
+				templateUrl: 'states/user_access/templates/acct_type.tmpl.html',
+				controller: 'registerController'
+			}
+		}		
+	})
+	.state('signup.interests', {
+		url: '/interests',
+		views:{
+			'main_page@signup':{
+				templateUrl: 'states/user_access/templates/interests.tmpl.html',
+				controller: 'registerController'
+			}
+		}		
+	})
+	.state('signup.complete', {
+		url: '/comeplete',
+		views:{
+			'main_page@signup':{
+				templateUrl: 'states/user_access/templates/complete_reg.tmpl.html',
+				controller: 'registerController'
+			}
+		}		
 	});
 
 } ] ).

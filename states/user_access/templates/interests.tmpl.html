@@ -1,0 +1,38 @@
+<div layout="column" layout-fill layout-align="center center" class="anim-slide-right" >
+		<h2 class="md-headline headline" style="color:#fff">What are your interests</h2>
+			<div layout="row">
+				<md-card >		
+					<img ng-src="images/sports-2.png" style="width:300px;height:250px" 
+						class="md-card-image" alt="Individual"/>
+					<md-card-title>
+					  <md-card-title-text>
+						
+					  </md-card-title-text>
+					</md-card-title>
+					<md-card-content layout-align="center center" ng-repeat="itr in int_model.interests">
+						<md-checkbox 
+						ng-true-value="'{{itr}}'"
+						ng-false-value="''"
+						ng-model="formData.interest[$index]"
+							  class="md-primary" flex>	
+								{{itr}}
+						</md-checkbox>
+					</md-card-content>
+					<md-card-actions layout="column" layout-align="end end">						
+							<md-button aria-label="Float Action Button" 
+								ng-click="interests()" class="md-fab md-primary">
+								<md-icon> arrow_forward </md-icon>
+							</md-button>						
+					</md-card-actions>
+				  </md-card>				  
+</div>
+</div>
+
+<!--<md-checkbox
+							  ng-model=""
+							  aria-label="Checkbox 2"
+							  ng-true-value="'yup'"
+							  ng-false-value="'nope'"
+							  md-align-top-left #use this with class
+							  class="md-warn" flex>							
+						</md-checkbox>-->
