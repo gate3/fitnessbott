@@ -54,5 +54,20 @@ config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $url
 } ] ).
 run([function(){
 	Parse.initialize('octo','Holdme2@forever');
-	Parse.serverURL = 'https://fitnessbott.herokuapp.com';
+	Parse.serverURL = 'https://octobackend.herokuapp.com';
+	var user = new Parse.User;
+	user.set("username", "my name");
+	user.set("password", "my pass");
+	user.set("email", "email@example.com");
+	
+	user.signUp(null, {
+	  success: function(user) {
+		// Hooray! Let them use the app now.
+		console.log(user);
+	  },
+	  error: function(user, error) {
+		// Show the error message somewhere and let the user try again.
+		console.log("Error: " + error.code + " " + error.message);
+	  }
+	});
 }]);
