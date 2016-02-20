@@ -59,7 +59,7 @@ run([function(){
 	user.set("username", "my name");
 	user.set("password", "my pass");
 	user.set("email", "email@example.com");
-	
+	console.log("parse test")
 	user.signUp(null, {
 	  success: function(user) {
 		// Hooray! Let them use the app now.
